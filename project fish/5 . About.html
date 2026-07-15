@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-900 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+
+        <a href="1 . Home.html" class="flex items-center gap-3">
+
+          <img src="รูปภาพ/fish.png" alt="Umi No Kura Logo" class="h-10 w-10 object-cover rounded-full">
+          <div class="leading-tight">
+            <div class="text-sm tracking-widest text-slate-700">うみのくら</div>
+            <div class="font-semibold tracking-[0.18em] text-orange-600">UMI NO KURA</div>
+          </div>
+        </a>
+        <!-- Nav links -->
+        <ul class="hidden md:flex items-center gap-8 text-slate-700">
+          <li><a href="1 . Home.html" class="hover:text-orange-600">Home</a></li>
+          <li><a href="2 . Shop Directory.html" class="hover:text-orange-600">Shop Directory</a></li>
+          <li><a href="3 . News & Promotions.html" class="hover:text-orange-600">News & Promotions</a></li>
+          <li><a href="4 . Reviews.html" class="hover:text-orange-600">Reviews</a></li>
+          <li><a href="5 . About.html" class="font-medium text-orange-600">About</a></li>
+          <li><a href="6 . Contact.html" class="hover:text-orange-600">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-slate-50/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900">About</h1>
+      <p class="mt-4 text-xl text-slate-500">
+        Discover the history fish market behind Kyoto’s most trusted fish market
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- HISTORY -->
+    <section class="grid md:grid-cols-2 gap-10 items-center px-2 sm:px-4 py-8 sm:py-12">
+      <div>
+        <h2 class="font-bold text-3xl text-sky-800 mb-4">Umi no Kura Market</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Nestled in the heart of Kyoto’s centuries-old culinary tradition is a fish market that locals have trusted for generations.
+          <br><br>
+          While Kyoto is a landlocked city, its historical ties with the Sea of Japan and Osaka’s bay through efficient river and land trade have allowed it to become a hub for fresh seafood — carefully selected, transported overnight, and delivered with precision.
+        </p>
+      </div>
+      <img
+        src="https://livingnomads.com/wp-content/uploads/2016/08/sushi-Tsukiji-tokyo-japan.jpg"
+        alt="Fish Market"
+        class="rounded-xl shadow-md w-full h-72 sm:h-80 md:h-96 object-cover"
+        loading="lazy"
+      >
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="w-full py-14 bg-slate-50">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl border border-gray-200 flex flex-col items-center py-8 px-6 shadow-sm">
+          <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full w-24 h-24 flex items-center justify-center mb-5">
+            <img src="./Icon/calendar.png" alt="Calendar Icon" class="w-14 h-14">
+          </div>
+          <div class="text-2xl font-bold text-gray-700 mb-2">Est. 1624</div>
+          <div class="text-gray-500 font-semibold">400 Years of Excellence</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl border border-gray-200 flex flex-col items-center py-8 px-6 shadow-sm">
+          <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full w-24 h-24 flex items-center justify-center mb-5">
+            <img src="./Icon/user.png" alt="Vendor Icon" class="w-14 h-14">
+          </div>
+          <div class="text-2xl font-bold text-gray-700 mb-2">150+ Vendors</div>
+          <div class="text-gray-500 font-semibold">Trusted Partners</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl border border-gray-200 flex flex-col items-center py-8 px-6 shadow-sm">
+          <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full w-24 h-24 flex items-center justify-center mb-5">
+            <img src="./Icon/sea.png" alt="Fish Icon" class="w-14 h-14">
+          </div>
+          <div class="text-2xl font-bold text-gray-700 mb-2">300+ Varieties</div>
+          <div class="text-gray-500 font-semibold">Fresh Daily</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl border border-gray-200 flex flex-col items-center py-8 px-6 shadow-sm">
+          <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full w-24 h-24 flex items-center justify-center mb-5">
+            <img src="./Icon/star.png" alt="Quality Icon" class="w-16 h-16">
+          </div>
+          <div class="text-2xl font-bold text-gray-700 mb-2">Premium Quality</div>
+          <div class="text-gray-500 font-semibold">Certified Standards</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section class="px-2 sm:px-0 py-12 sm:py-16">
+      <div class="bg-gradient-to-br from-indigo-100 to-cyan-200 rounded-2xl shadow-md px-6 sm:px-10 py-12 sm:py-16 text-center">
+        <h2 class="font-bold text-4xl mb-6">Our Mission</h2>
+        <p class="text-gray-600 text-xl font-medium leading-relaxed max-w-3xl mx-auto">
+          To preserve Kyoto's culinary traditions while providing the finest, freshest seafood to our community.
+          We bridge the gap between Japan's pristine waters and your table, ensuring every piece of fish meets our exacting standards.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (same as Shop Directory) -->
+  <footer class="bg-[#0f2f4a] text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+        <!-- Brand -->
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3">
+            <img src="รูปภาพ/fish.png" alt="logo" class="h-10 w-10">
+            <h4 class="font-bold text-lg">Umi No Kura Market</h4>
+          </div>
+          <p class="mt-2 text-slate-300 text-sm">
+            Providing the finest seafood from Kyoto's traditional fish markets.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="text-center">
+          <h4 class="font-bold text-lg">Contact Info</h4>
+          <p class="mt-2 text-slate-300 text-sm">
+            UMINOKURA Market, Kyoto, Japan <br>
+            Open: 5:00 AM – 2:00 PM Daily
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="flex flex-col items-center md:items-end">
+          <h4 class="font-bold text-lg">Follow Us</h4>
+          <div class="mt-3 flex gap-4">
+            <a href="#" aria-label="Instagram" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="h-8 w-8">
+            </a>
+            <a href="#" aria-label="Facebook" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="h-8 w-8">
+            </a>
+            <a href="#" aria-label="Line" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/889/889154.png" alt="Line" class="h-8 w-8">
+            </a>
+          </div>
+        </div>
+      </div>
+
+     <div class="border-t border-slate-600 mt-8 pt-4 text-center text-sm text-slate-300">
+  © 2025 UMI NO KURA Market. All rights reserved.
+</div>
+    </div>
+  </footer>
+  
+</body>
+</html>

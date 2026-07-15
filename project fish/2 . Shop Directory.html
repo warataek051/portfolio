@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop Directory</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-900">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="1 . Home.html" class="flex items-center gap-3">
+          <img src="รูปภาพ/fish.png" alt="Umi No Kura Logo" class="h-10 w-10 object-cover rounded-full">
+          <div class="leading-tight">
+            <div class="text-sm tracking-widest text-slate-700">うみのくら</div>
+            <div class="font-semibold tracking-[0.18em] text-orange-600">UMI NO KURA</div>
+          </div>
+        </a>
+        <!-- Nav links -->
+        <ul class="hidden md:flex items-center gap-8 text-slate-700">
+          <li><a href="1 . Home.html" class="hover:text-orange-600">Home</a></li>
+          <li><a href="2 . Shop Directory.html" class="font-medium text-orange-600">Shop Directory</a></li>
+          <li><a href="3 . News & Promotions.html" class="hover:text-orange-600">News & Promotions</a></li>
+          <li><a href="4 . Reviews.html" class="hover:text-orange-600">Reviews</a></li>
+          <li><a href="5 . About.html" class="hover:text-orange-600">About</a></li>
+          <li><a href="6 . Contact.html" class="hover:text-orange-600">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    
+  <!-- HERO -->
+  <div class="bg-slate-50/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900">
+        Shop Directory
+      </h1>
+      <p class="mt-4 text-xl text-slate-500">
+        Discover trusted shops and vendors in Kyoto's fish market
+      </p>
+
+      <!-- Filter buttons -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <button class="rounded-full px-6 py-3 bg-white shadow ring-1 ring-black/5 text-slate-800 font-semibold hover:bg-slate-50 transition">
+          All Shops
+        </button>
+        <button class="rounded-full px-6 py-3 bg-white shadow ring-1 ring-black/5 text-slate-800 font-semibold hover:bg-slate-50 transition">
+          Top Rated
+        </button>
+        <button class="rounded-full px-6 py-3 bg-white shadow ring-1 ring-black/5 text-slate-800 font-semibold hover:bg-slate-50 transition">
+          Newest
+        </button>
+        <button class="rounded-full px-6 py-3 bg-white shadow ring-1 ring-black/5 text-slate-800 font-semibold hover:bg-slate-50 transition">
+          Traditional
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+     
+    <!-- ROW 1 -->
+    <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- ตัวอย่างการ์ด -->
+
+      
+      <!-- Card 1 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://www.japan-guide.com/g18/3931_02.jpg"
+            alt="Market 1" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Kyoto Central Fish Market</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Fresh Tuna &amp; Seafood</a>
+          <p class="mt-3 text-sm text-slate-600">One of the largest wholesale seafood markets in Kyoto.</p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.8 <span class="text-slate-400">(320 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/05578e3b-00c3-428c-87fe-5f29ce091959/Kimura+in+Nishiki+Market" alt="Market 2" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Nishiki Market</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Street Seafood Stalls</a>
+          <p class="mt-3 text-sm text-slate-600">A lively marketplace with fresh seafood and Kyoto delicacies.</p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.6 <span class="text-slate-400">(210 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHbllAl0NpmdfOiC5AxSdZJYG2tp_nQegX3g&s"
+            alt="Market 3" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Kyoto Riverside Market</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Seasonal Fish &amp; Crabs</a>
+          <p class="mt-3 text-sm text-slate-600">Known for seasonal crabs and fresh catches along the river.</p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.4 <span class="text-slate-400">(145 reviews)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 4 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVci9gnXvSJpBrTOKaTy0fp_b4snooxl_JMw&s"
+            alt="Traditional fish market" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Traditional Fish Market</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Traditional Preparation Methods</a>
+          <p class="mt-3 text-sm text-slate-600">
+            Preserving ancient fish preparation techniques passed down through generations.
+          </p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.7 <span class="text-slate-400">(203 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmaBqd4rBouMmscRN7Q1Qs5ZKvCpJsRKRzPA&s"
+            alt="Sakura Seafood Market" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Sakura Seafood Market</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Sushi-Grade Fish &amp; Shellfish</a>
+          <p class="mt-3 text-sm text-slate-600">
+            Specializing in sushi-grade fish and premium shellfish for top restaurants.
+          </p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.5 <span class="text-slate-400">(67 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxu9pYSENYGfC82KTjDBnqiyXDBNwDB_ZlVQ&s"
+            alt="Blue Wave Fishmonger" class="h-60 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Blue Wave Fishmonger</h3>
+          <a class="mt-1 inline-block text-blue-600 hover:underline">Whole Fish &amp; Custom Cuts</a>
+          <p class="mt-3 text-sm text-slate-600">
+            Expert whole fish selection and custom cutting services for any occasion.
+          </p>
+          <div class="mt-3 flex items-center gap-2 text-sm text-slate-600">
+            <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="m12 17.27 6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.73L5.82 21z"/></svg>
+            4.4 <span class="text-slate-400">(78 reviews)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f2f4a] text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3">
+            <img src="รูปภาพ/fish.png" alt="logo" class="h-10 w-10">
+            <h4 class="font-bold text-lg">Umi No Kura Market</h4>
+          </div>
+          <p class="mt-2 text-slate-300 text-sm">
+            Providing the finest seafood from Kyoto's traditional fish markets.
+          </p>
+        </div>
+        <div class="text-center">
+          <h4 class="font-bold text-lg">Contact Info</h4>
+          <p class="mt-2 text-slate-300 text-sm">
+            UMINOKURA Market, Kyoto, Japan <br>
+            Open: 5:00 AM – 2:00 PM Daily
+          </p>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <h4 class="font-bold text-lg">Follow Us</h4>
+          <div class="mt-3 flex gap-4">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/889/889154.png" alt="Line" class="h-8 w-8"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-600 mt-8 pt-4 text-center text-sm text-slate-300">
+        © 2025 UMI NO KURA Market. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

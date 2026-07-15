@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-900 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="1 . Home.html" class="flex items-center gap-3">
+
+          <img src="รูปภาพ/fish.png" alt="Umi No Kura Logo" class="h-10 w-10 object-cover rounded-full">
+          <div class="leading-tight">
+            <div class="text-sm tracking-widest text-slate-700">うみのくら</div>
+            <div class="font-semibold tracking-[0.18em] text-orange-600">UMI NO KURA</div>
+          </div>
+        </a>
+        <!-- Nav links -->
+        <ul class="hidden md:flex items-center gap-8 text-slate-700">
+          <li><a href="1 . Home.html" class="hover:text-orange-600">Home</a></li>
+          <li><a href="2 . Shop Directory.html" class="hover:text-orange-600">Shop Directory</a></li>
+          <li><a href="3 . News & Promotions.html" class="hover:text-orange-600">News & Promotions</a></li>
+          <li><a href="4 . Reviews.html" class="hover:text-orange-600">Reviews</a></li>
+          <li><a href="5 . About.html" class="hover:text-orange-600">About</a></li>
+          <li><a href="6 . Contact.html" class="font-medium text-orange-600">Contact</a></li>
+         </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- HERO -->
+  <section class="bg-slate-50/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900">Contact</h1>
+      <p class="mt-4 text-xl text-slate-500">We’d love to hear from you. Send us a message or visit us in Kyoto.</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+
+    <!-- Main container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <!-- Left: Form -->
+      <div class="bg-white rounded-2xl shadow ring-1 ring-black/5 p-8">
+        <form class="space-y-6" action="#" method="post">
+          <div class="flex items-center gap-3 mb-2">
+            <img class="w-8 h-8" src="./Icon/comment-white-oval-bubble - Copy.png" alt="Message icon">
+            <span class="font-bold text-2xl">Send us a Message</span>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="w-1/2">
+              <label class="block font-semibold mb-2" for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name"
+                     class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-300"
+                     required />
+            </div>
+            <div class="w-1/2">
+              <label class="block font-semibold mb-2" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com"
+                     class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-300"
+                     required />
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-semibold mb-2" for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="What is this regarding?"
+                   class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-300" />
+          </div>
+
+          <div>
+            <label class="block font-semibold mb-2" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..."
+                      class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-300"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full bg-sky-500 text-white rounded-lg py-3 font-semibold shadow hover:bg-sky-600 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Info Section -->
+      <div class="flex flex-col gap-6">
+        <!-- Visit Us -->
+        <div class="bg-white rounded-2xl shadow ring-1 ring-black/5 p-8">
+          <h2 class="font-bold text-2xl mb-4 flex items-center gap-2">
+            <img class="w-8 h-8" src="Icon/location.png" alt="Location icon">
+            <span>Visit Us</span>
+          </h2>
+          <p class="mb-4 text-slate-700">
+            123 Nishiki Market Street<br> Nakagyo Ward, Kyoto<br> Japan 604-8054
+          </p>
+          <img class="rounded-xl w-full h-60 object-cover mb-2"
+               src="./Icon/Screenshot 2025-08-20 194422.png"
+               alt="Map to market">
+        </div>
+
+        <!-- Phone / Email cards -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col items-center bg-white rounded-2xl shadow ring-1 ring-black/5 p-6">
+            <img class="w-8 h-8 mb-2" src="./Icon/telephone.png" alt="Phone icon">
+            <span class="font-semibold">Phone</span>
+            <span class="text-slate-500 text-sm">+81 75-123-4567</span>
+          </div>
+          <div class="flex flex-col items-center bg-white rounded-2xl shadow ring-1 ring-black/5 p-6">
+            <img class="w-8 h-8 mb-2" src="./Icon/email.png" alt="Email icon">
+            <span class="font-semibold">Email</span>
+            <span class="text-slate-500 text-sm">info@kyotofishmarket.jp</span>
+          </div>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="bg-white rounded-2xl shadow ring-1 ring-black/5 p-8">
+          <h2 class="font-bold text-2xl mb-3 flex items-center gap-2">
+            <img class="w-8 h-8" src="./Icon/clock.png" alt="Clock icon">
+            <span>Business Hours</span>
+          </h2>
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-medium">Monday - Sunday</div>
+              <div class="text-slate-600 text-sm pt-1">Peak Hours</div>
+            </div>
+            <div class="text-right">
+              <div class="font-medium">5:00 AM - 2:00 PM</div>
+              <div class="text-slate-600 text-sm pt-1">6:00 AM - 10:00 AM</div>
+            </div>
+          </div>
+          <div class="text-slate-400 text-sm mt-3">* Closed on New Year's Day</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-white rounded-2xl shadow ring-1 ring-black/5 p-8">
+      <h2 class="font-bold text-2xl mb-6 flex items-center gap-2">
+        <img class="w-8 h-8" src="./Icon/question.png" alt="FAQ icon">
+        <span>Frequently Asked Questions</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <div class="font-semibold">What are the best times to visit?</div>
+          <div class="text-slate-600 text-sm mb-4 pt-2">
+            Early morning (6–8 AM) offers the freshest selection and best prices.
+          </div>
+          <div class="font-semibold">Can tourists visit the market?</div>
+          <div class="text-slate-600 text-sm mb-4 pt-2">
+            Yes! Tourists are welcome. We recommend guided tours for the best experience.
+          </div>
+        </div>
+        <div>
+          <div class="font-semibold">Do you accept credit cards?</div>
+          <div class="text-slate-600 text-sm mb-4 pt-2">
+            Most vendors accept cash, but many now also accept credit cards and IC cards.
+          </div>
+          <div class="font-semibold">Do you ship nationwide?</div>
+          <div class="text-slate-600 text-sm mb-4 pt-2">
+            Yes, many vendors offer nationwide shipping with same-day delivery in Kansai region.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (same style as Shop Directory) -->
+  <footer class="bg-[#0f2f4a] text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+        <!-- Brand -->
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3">
+            <img src="รูปภาพ/fish.png" alt="logo" class="h-10 w-10">
+            <h4 class="font-bold text-lg">Umi No Kura Market</h4>
+          </div>
+          <p class="mt-2 text-slate-300 text-sm">
+            Providing the finest seafood from Kyoto's traditional fish markets.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="text-center">
+          <h4 class="font-bold text-lg">Contact Info</h4>
+          <p class="mt-2 text-slate-300 text-sm">
+            UMINOKURA Market, Kyoto, Japan <br>
+            Open: 5:00 AM – 2:00 PM Daily
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="flex flex-col items-center md:items-end">
+          <h4 class="font-bold text-lg">Follow Us</h4>
+          <div class="mt-3 flex gap-4">
+            <a href="#" aria-label="Instagram" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="h-8 w-8">
+            </a>
+            <a href="#" aria-label="Facebook" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="h-8 w-8">
+            </a>
+            <a href="#" aria-label="Line" class="hover:opacity-80 transition">
+              <img src="https://cdn-icons-png.flaticon.com/512/889/889154.png" alt="Line" class="h-8 w-8">
+            </a>
+          </div>
+        </div>
+      </div>
+
+     <div class="border-t border-slate-600 mt-8 pt-4 text-center text-sm text-slate-300">
+  © 2025 UMI NO KURA Market. All rights reserved.
+</div>
+    </div>
+  </footer>   
+  
+</body>
+</html>

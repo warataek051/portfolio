@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News & Promotions</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-900">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="1 . Home.html" class="flex items-center gap-3">
+          <img src="รูปภาพ/fish.png" alt="Umi No Kura Logo" class="h-10 w-10 object-cover rounded-full">
+          <div class="leading-tight">
+            <div class="text-sm tracking-widest text-slate-700">うみのくら</div>
+            <div class="font-semibold tracking-[0.18em] text-orange-600">UMI NO KURA</div>
+          </div>
+        </a>
+        <!-- Nav links -->
+        <ul class="hidden md:flex items-center gap-8 text-slate-700">
+          <li><a href="1 . Home.html" class="hover:text-orange-600">Home</a></li>
+          <li><a href="2 . Shop Directory.html" class="hover:text-orange-600">Shop Directory</a></li>
+          <li><a href="3 . News & Promotions.html" class="font-medium text-orange-600">News & Promotions</a></li>
+          <li><a href="4 . Reviews.html" class="hover:text-orange-600">Reviews</a></li>
+          <li><a href="5 . About.html" class="hover:text-orange-600">About</a></li>
+          <li><a href="6 . Contact.html" class="hover:text-orange-600">Contact</a></li>
+        </ul>
+        <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-slate-100" aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-slate-50/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900">
+        News & Promotions
+      </h1>
+      <p class="mt-4 text-xl text-slate-500">
+        Stay updated with the latest market news, events, and special offers
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Featured News -->
+    <section aria-labelledby="featured-news">
+      <h2 id="featured-news" class="text-3xl font-bold mb-8 text-slate-800">Featured News</h2>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Card 1 -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://www.ana.co.jp/japan-travel-planner/experiences/winter-foods/images/content_img_01.jpg"
+                 alt="Hokkaido fish arrivals" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-slate-100/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"/></svg>
+              News
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-6 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-15">January 15, 2025</time>
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-9 9a9 9 0 1 1 18 0H3Z"/></svg>
+                Market News Team
+              </span>
+            </div>
+            <h3 class="mt-3 text-2xl font-bold text-slate-900">New Seasonal Fish Arrivals from Hokkaido</h3>
+            <p class="mt-2 text-slate-600">Premium winter catches including snow crab and fresh salmon have arrived.</p>
+            <a href="#" class="mt-5 inline-flex items-center justify-center rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://pattaya.intercontinental.com/img/asset/bWFpbi9jb3Zlci1tYXJ2ZWxvdXMtYmJxLXNlYWZvb2QtYnVmZmV0LSgxKS5qcGc=?w=+1440&h=900&fit=crop&s=58e410224d4a9d5424aff4154c356dbf"
+                 alt="Weekend tuna promotion" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-rose-500/90 px-3 py-1 text-xs font-semibold text-white shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.2L19 7l-7 3.8L5 7l7-2.8ZM5 9.3l7 3.8 7-3.8V16l-7 3.8L5 16V9.3Z"/></svg>
+              Promotion
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-6 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-15">January 15, 2025</time>
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-9 9a9 9 0 1 1 18 0H3Z"/></svg>
+                Market News Team
+              </span>
+            </div>
+            <h3 class="mt-3 text-2xl font-bold text-slate-900">Weekend Special: 20% Off Premium Tuna</h3>
+            <p class="mt-2 text-slate-600">Special weekend discount on all premium tuna varieties.</p>
+            <a href="#" class="mt-5 inline-flex items-center justify-center rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section aria-labelledby="latest-news" class="mt-12">
+      <h2 id="latest-news" class="text-3xl font-bold mb-8 text-slate-800">Latest News</h2>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- A -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://media.istockphoto.com/id/458692203/photo/tsukiji-fish-market-in-tokyo-japan.jpg?s=612x612&w=0&k=20&c=naIPWczErY7MEuuluJZ6hXzdBzHR4OARoSkq8Vpr7gg="
+                 alt="Fish cutting demo" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-slate-100/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v11l10 5 10-5V4l-10 5Z"/></svg>
+              Event
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-14">January 14, 2025</time>
+              </span>
+            </div>
+            <h3 class="mt-3 text-xl font-bold text-slate-900">Traditional Fish Cutting Demonstration</h3>
+            <p class="mt-2 text-slate-600">Watch master fishmongers demonstrate traditional Japanese fish cutting techniques.</p>
+            <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+             
+            </a>
+          </div>
+        </div>
+
+        <!-- B -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://moneyandbanking.co.th/wp-content/uploads/2025/03/popmart-905x613.webp"
+                 alt="Market expansion" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-slate-100/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v11l10 5 10-5V4l-10 5Z"/></svg>
+              Event
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-13">January 13, 2025</time>
+              </span>
+            </div>
+            <h3 class="mt-3 text-xl font-bold text-slate-900">Market Expansion Plans Announced</h3>
+            <p class="mt-2 text-slate-600">New facilities will double our capacity while preserving traditional atmosphere.</p>
+            <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+             
+            </a>
+          </div>
+        </div>
+
+        <!-- C -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZrHXufscAXp6taSOViWgZfehtUu0yvoCiw&s"
+                 alt="Nishiki market news" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-slate-100/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"/></svg>
+              News
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-12">January 12, 2025</time>
+              </span>
+            </div>
+            <h3 class="mt-3 text-xl font-bold text-slate-900">New Customer Welcome Offer</h3>
+            <p class="mt-2 text-slate-600">First-time visitors receive a complimentary fish preparation guide.</p>
+            <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+              
+            </a>
+          </div>
+        </div>
+
+        <!-- D -->
+        <div class="rounded-2xl bg-white shadow ring-1 ring-black/5 overflow-hidden">
+          <div class="relative">
+            <img src="https://byfood.b-cdn.net/api/public/assets/66076/content?optimizer=image&width=600&sharpen=true"
+                 alt="Sashimi workshop" class="h-60 w-full object-cover" loading="lazy">
+            <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-slate-100/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"/></svg>
+              News
+            </span>
+            <span class="absolute right-3 top-3 inline-flex rounded-full bg-teal-600/90 px-3 py-1 text-xs font-semibold text-white shadow">Featured</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2Zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9Z"/></svg>
+                <time datetime="2025-01-11">January 11, 2025</time>
+              </span>
+            </div>
+            <h3 class="mt-3 text-xl font-bold text-slate-900">Culinary Workshop: Sashimi Basics</h3>
+            <p class="mt-2 text-slate-600">Learn the art of sashimi preparation from expert chefs.</p>
+            <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              Read More
+          
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f2f4a] text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3">
+            <img src="รูปภาพ/fish.png" alt="logo" class="h-10 w-10">
+            <h4 class="font-bold text-lg">Umi No Kura Market</h4>
+          </div>
+          <p class="mt-2 text-slate-300 text-sm">
+            Providing the finest seafood from Kyoto's traditional fish markets.
+          </p>
+        </div>
+        <div class="text-center">
+          <h4 class="font-bold text-lg">Contact Info</h4>
+          <p class="mt-2 text-slate-300 text-sm">
+            UMINOKURA Market, Kyoto, Japan <br>
+            Open: 5:00 AM – 2:00 PM Daily
+          </p>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <h4 class="font-bold text-lg">Follow Us</h4>
+          <div class="mt-3 flex gap-4">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/889/889154.png" alt="Line" class="h-8 w-8"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-600 mt-8 pt-4 text-center text-sm text-slate-300">
+        © 2025 UMI NO KURA Market. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

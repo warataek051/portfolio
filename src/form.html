@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มรับสมัครศิษย์เก่า IT + IS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center">แบบฟอร์มรับสมัครศิษย์เก่า IT + IS</h2>
+        <form action="#" method="post" enctype="multipart/form-data" class="space-y-4">
+            <div>
+                <label for="fullName" class="block font-medium">ชื่อ-สกุล:</label>
+                <input type="text" id="fullName" name="fullName" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            
+            <div>
+                <label for="studentID" class="block font-medium">รหัสนักศึกษา:</label>
+                <input type="text" id="studentID" name="studentID" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="gender" class="block font-medium">เพศ:</label>
+                <select id="gender" name="gender" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="admissionYear" class="block font-medium">ปีการศึกษาที่เข้าศึกษา:</label>
+                <input type="number" id="admissionYear" name="admissionYear" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="address" class="block font-medium">ที่อยู่:</label>
+                <textarea id="address" name="address" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+            </div>
+
+            <div>
+                <label for="email" class="block font-medium">อีเมล:</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="phone" class="block font-medium">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="phone" name="phone" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="program" class="block font-medium">ชื่อหลักสูตร:</label>
+                <select id="program" name="program" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="it">IT</option>
+                    <option value="is">IS</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="currentJob" class="block font-medium">อาชีพปัจจุบัน:</label>
+                <input type="text" id="currentJob" name="currentJob" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="workPlace" class="block font-medium">สถานที่ทำงาน:</label>
+                <input type="text" id="workPlace" name="workPlace" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="jobType" class="block font-medium">ประเภทงานที่ทำ:</label>
+                <select id="jobType" name="jobType" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="webDeveloper">Web Developer</option>
+                    <option value="sa">SA</option>
+                    <option value="graphicDesign">Graphic Design</option>
+                    <option value="digitalMarketing">Digital Marketing</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="photo" class="block font-medium">อัปโหลดรูปถ่าย:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">ส่งข้อมูล</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

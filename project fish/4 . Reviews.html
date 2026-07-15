@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reviews</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-900 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+       <a href="1 . Home.html" class="flex items-center gap-3">
+
+          <img src="รูปภาพ/fish.png" alt="Umi No Kura Logo" class="h-10 w-10 object-cover rounded-full">
+          <div class="leading-tight">
+            <div class="text-sm tracking-widest text-slate-700">うみのくら</div>
+            <div class="font-semibold tracking-[0.18em] text-orange-600">UMI NO KURA</div>
+          </div>
+        </a>
+        
+        <!-- Nav links -->
+        <ul class="hidden md:flex items-center gap-8 text-slate-700">
+          <li><a href="1 . Home.html" class="hover:text-orange-600">Home</a></li>
+          <li><a href="2 . Shop Directory.html" class="hover:text-orange-600">Shop Directory</a></li>
+          <li><a href="3 . News & Promotions.html" class="hover:text-orange-600">News & Promotions</a></li>
+          <li><a href="4 . Reviews.html" class="font-medium text-orange-600">Reviews</a></li>
+          <li><a href="5 . About.html" class="hover:text-orange-600">About</a></li>
+          <li><a href="6 . Contact.html" class="hover:text-orange-600">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-slate-50/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900">Reviews</h1>
+      <p class="mt-4 text-xl text-slate-500">Read customer reviews and share your experience</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-12">
+
+    <!-- Summary & Distribution -->
+    <section class="rounded-2xl bg-white p-6 sm:p-10 shadow ring-1 ring-black/5">
+      <div class="grid gap-8 md:grid-cols-2 items-center">
+
+        <!-- Left: Average -->
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="flex text-yellow-400 text-2xl">★★★★★</div>
+            <span class="text-sky-500 font-extrabold text-4xl ml-2">4.7</span>
+          </div>
+
+          <p class="mt-4 text-lg font-semibold text-slate-900">Based on 5 reviews</p>
+          <p class="text-slate-600">Highly rated by our customers</p>
+
+          <a href="#write-review"
+             class="mt-6 inline-flex items-center gap-3 rounded-xl bg-sky-500 px-6 py-3 text-white font-semibold shadow hover:bg-sky-600 transition">
+            <span class="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white text-sky-500 ring-2 ring-sky-300">
+              💬
+            </span>
+            Write Review
+          </a>
+        </div>
+
+        <!-- Right: Distribution bars -->
+        <div class="grid gap-3">
+          <div class="flex items-center gap-3">
+            <span class="w-10 font-medium">5 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full">
+              <div class="h-2 bg-indigo-500 rounded-full w-3/5"></div>
+            </div>
+            <span class="w-6 text-right">3</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-10 font-medium">4 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full">
+              <div class="h-2 bg-indigo-500 rounded-full w-1/2"></div>
+            </div>
+            <span class="w-6 text-right">2</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-400">
+            <span class="w-10 font-medium">3 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full"></div>
+            <span class="w-6 text-right">0</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-400">
+            <span class="w-10 font-medium">2 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full"></div>
+            <span class="w-6 text-right">0</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-400">
+            <span class="w-10 font-medium">1 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full"></div>
+            <span class="w-6 text-right">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter pills -->
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <button class="px-6 py-2 rounded-xl bg-slate-100 text-slate-900 font-semibold shadow hover:bg-slate-200">All Reviews</button>
+      <button class="px-6 py-2 rounded-xl bg-slate-100 text-slate-900 font-semibold shadow hover:bg-slate-200">Most Recent</button>
+      <button class="px-6 py-2 rounded-xl bg-slate-100 text-slate-900 font-semibold shadow hover:bg-slate-200">Highest Rate</button>
+      <button class="px-6 py-2 rounded-xl bg-slate-100 text-slate-900 font-semibold shadow hover:bg-slate-200">Verified Only</button>
+    </div>
+
+    <!-- Reviews List -->
+    <section class="mt-12 space-y-6">
+      
+      <!-- Review Card -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-blue-300 flex items-center justify-center font-bold text-slate-900">T</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Tanaka Hiroshi 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★★
+              <span class="text-slate-500 text-sm">Jan 7, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Exceptional quality tuna! The staff was incredibly knowledgeable and helped me select the perfect cut for sashimi.</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+
+      <!-- เพิ่มการ์ดรีวิวอื่น ๆ ตามรูป (Sarah, Watanabe, Michael, Kimura) -->
+           <!-- Reviews List -->
+    <section class="mt-12 space-y-6">
+      
+      <!-- Review 1 -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-blue-300 flex items-center justify-center font-bold text-slate-900">T</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Tanaka Hiroshi 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★★
+              <span class="text-slate-500 text-sm">Jan 7, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Exceptional quality tuna! The staff was incredibly knowledgeable and helped me select the perfect cut for sashimi.</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-pink-300 flex items-center justify-center font-bold text-slate-900">S</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Sarah Johnson 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★★
+              <span class="text-slate-500 text-sm">Jan 13, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Fresh fish daily! Great variety and the prices are reasonable. Will definitely return.</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-green-300 flex items-center justify-center font-bold text-slate-900">W</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Watanabe Yuki 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★☆
+              <span class="text-slate-500 text-sm">Jan 18, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Great atmosphere and wide selection of seafood. A bit crowded but worth the visit!</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-purple-300 flex items-center justify-center font-bold text-slate-900">M</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Michael Chen 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★★
+              <span class="text-slate-500 text-sm">Jan 21, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Fantastic experience! The seafood was fresh and the staff was welcoming. Highly recommend the sushi stalls.</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="rounded-xl bg-slate-100 p-6 shadow">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-yellow-300 flex items-center justify-center font-bold text-slate-900">K</div>
+          <div>
+            <h3 class="font-bold flex items-center gap-2">Kimura Akiko 
+              <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" class="h-5 w-5" alt="verified">
+            </h3>
+            <div class="flex items-center gap-2 text-yellow-400">
+              ★★★★☆
+              <span class="text-slate-500 text-sm">Jan 25, 2025</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700">Loved the unique seasonal fish options. Prices are fair for the quality. Will come again with friends!</p>
+        <div class="mt-4 flex gap-6 text-slate-500 text-sm">
+          <button class="hover:text-sky-500">👍 Helpful</button>
+          <button class="hover:text-sky-500">↩ Reply</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Load More Button -->
+    <div class="mt-12 flex justify-center">
+      <button class="px-8 py-3 rounded-xl bg-white shadow font-semibold text-slate-800 hover:bg-slate-50 hover:shadow-md transition">
+        Load More Reviews
+      </button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f2f4a] text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="flex items-center gap-3">
+            <img src="รูปภาพ/fish.png" alt="logo" class="h-10 w-10">
+            <h4 class="font-bold text-lg">Umi No Kura Market</h4>
+          </div>
+          <p class="mt-2 text-slate-300 text-sm">
+            Providing the finest seafood from Kyoto's traditional fish markets.
+          </p>
+        </div>
+        <div class="text-center">
+          <h4 class="font-bold text-lg">Contact Info</h4>
+          <p class="mt-2 text-slate-300 text-sm">
+            UMINOKURA Market, Kyoto, Japan <br>
+            Open: 5:00 AM – 2:00 PM Daily
+          </p>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <h4 class="font-bold text-lg">Follow Us</h4>
+          <div class="mt-3 flex gap-4">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="h-8 w-8"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/889/889154.png" alt="Line" class="h-8 w-8"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-600 mt-8 pt-4 text-center text-sm text-slate-300">
+        © 2025 UMI NO KURA Market. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

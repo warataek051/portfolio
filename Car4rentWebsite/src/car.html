@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>รถเช่าราคาพิเศษ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+        <!-- เมนูหลัก -->
+        <div>
+            <div class="flex justify-between items-center px-4 py-2">
+            <!-- ส่วน logo -->
+            <div class="flex justify-items-start items-center ml-6">
+                <img src="img/logo1.png" alt="Logo" class="w-24 h-auto md:w-32" />
+                <h1 class="text-xl text-pink-600 font-semibold lg:block hidden">
+                Car4Rent
+                </h1>
+            </div>
+
+            <!-- เมนูรอง -->
+            <div class="flex justify-between items-center p-4">
+                <div class="flex items-center md:hidden">
+                <!-- เมนูแฮมเบอร์เกอร์ไอคอน -->
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <span class="block w-6 h-0.5 bg-pink-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-pink-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-pink-600"></span>
+                </button>
+                </div>
+                <!-- Menu for large screens (md and above) -->
+                <div class="hidden md:flex justify-around items-center w-full">
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >หน้าหลัก</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >ความช่วยเหลือ</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >สมัครสมาชิก/ลงชื่อเข้าใช้</a
+                >
+                </div>
+                <!-- Menu for small screens (hamburger menu) -->
+                <div
+                id="menu"
+                class="hidden flex-col items-center absolute top-12 left-0 w-full bg-yellow-300"
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >หน้าหลัก</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >ความช่วยเหลือ</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 rounded-md transition duration-300 hover:text-black text-pink-600"
+                    >สมัครสมาชิก/ลงชื่อเข้าใช้</a
+                >
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-b from-yellow-200 to-yellow-300">
+            <div
+            class="flex md:flex-row justify-center items-center min-h-screen w-full px-6 md:pt-30"
+            >
+            <!-- ฟอร์ม -->
+            <div class="flex-1 max-w-lg">
+                <!-- หัวข้อค้นหา -->
+                <h1 class="text-3xl font-bold text-shadow text-left">
+                ค้นหารถเช่าที่ถูกที่สุด
+                </h1>
+
+                <div mt-4 mb-4>
+                <!-- สถานที่รับ -->
+                <h2 class="text-xl font-semibold mt-4 text-shadow text-left">
+                    สถานที่รับ-คืนรถ
+                </h2>
+                <input
+                    type="text"
+                    placeholder="กรอกชื่อจังหวัด"
+                    class="border rounded-lg p-2 mt-2 w-full"
+                />
+
+                <!-- วันที่รับ -->
+                <h2 class="text-xl font-semibold mt-4 text-shadow text-left">
+                    วันที่รับรถ
+                </h2>
+
+                <div class="flex gap-2 mt-2">
+                    <input
+                    type="text"
+                    placeholder="Day"
+                    class="border rounded-lg p-2 w-20"
+                    />
+
+                    <input
+                    type="text"
+                    placeholder="Month"
+                    class="border rounded-lg p-2 w-20"
+                    />
+
+                    <input
+                    type="text"
+                    placeholder="Year"
+                    class="border rounded-lg p-2 w-24"
+                    />
+
+                    <input
+                    type="text"
+                    placeholder="HH/MM AM"
+                    class="border rounded-lg p-2 w-32"
+                    />
+                </div>
+
+                <!-- วันที่คืน -->
+                <h2 class="text-xl font-semibold mt-4 text-shadow text-left">
+                    วันที่คืนรถ
+                </h2>
+
+                <div class="flex gap-2 mt-2">
+                    <input
+                    type="text"
+                    placeholder="Day"
+                    class="border rounded-lg p-2 w-20"
+                    />
+                    <input
+                    type="text"
+                    placeholder="Month"
+                    class="border rounded-lg p-2 w-20"
+                    />
+
+                    <input
+                    type="text"
+                    placeholder="Year"
+                    class="border rounded-lg p-2 w-24"
+                    />
+
+                    <input
+                    type="text"
+                    placeholder="HH/MM AM"
+                    class="border rounded-lg p-2 w-32"
+                    />
+                </div>
+                <br />
+
+                <!-- ปุ่มค้นหา -->
+                <button
+                    class="bg-black text-white rounded-lg p-2 w-full hover:bg-white hover:text-black"
+                >
+                    Search
+                </button>
+                </div>
+            </div>
+
+            <!-- รูปภาพ -->
+            <div class="ml-8">
+                <img
+                src="img/Carphone.png"
+                alt="Carphone"
+                class="hidden lg:block w-[500px] h-auto scale-110"
+                />
+            </div>
+            </div>
+
+            <!-- ส่วนคำอธิบายเพิ่มเติม -->
+            <div
+            class="bg-black bg-opacity-70 text-white text-center py-12 w-full px-4"
+            >
+            <p class="text-5xl font-semibold">Ready to serve,</p>
+            <p class="text-5xl font-semibold">for every road you take</p>
+
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4"></div>
+            </div>
+        </div>
+
+        <body class="font-sans text-center p-6">
+            <div class="max-w-6xl mx-auto">
+            <!-- ส่วนหัวข้อของหน้า -->
+            <h1 class="text-5xl font-bold mt-20">รถเช่าราคาพิเศษ</h1>
+            <h2 class="text-gray-500 text-lg mt-1">รถเช่ากับราคาสุดพิเศษ</h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4 mb-10"></div>
+
+            <!-- ส่วนรายการรถเช่า -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <!-- รายการรถ -->
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://www.toyotanont.com/public/uploads/cars/2/grade/e7fc14235db44cb65c7e53ac5abc7c32.png"
+                    alt="Toyota Yaris"
+                    class="w-full rounded-md mt-5"
+                />
+                <h3 class="text-lg font-semibold mt-2">Toyota Yaris</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 4 | 🧳 2 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿528 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://www.toyotakrungthai.com/wp-content/uploads/2024/10/prem-lux.webp"
+                    alt="Toyota Camry"
+                    class="w-full rounded-md mt-5"
+                />
+                <h3 class="text-lg font-semibold mt-2">Toyota Camry</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 4 | 🧳 2 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿832 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white text-black w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://www.toyota.co.th/media/product/series/grades/v/corollacross/9/7189d9bc58e03a3e2867855d9d47374a988ed149d4031316658b1523fa16abb3.webp"
+                    alt="Toyota Corolla"
+                    class="w-full rounded-md mt-5"
+                />
+                <h3 class="text-lg font-semibold mt-2">Toyota Corolla</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 4 | 🧳 3 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿554 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white text-black w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://www.pngarts.com/files/4/Toyota-PNG-High-Quality-Image.png"
+                    alt="Class Standard Car"
+                    class="w-full rounded-md"
+                />
+                <h3 class="text-lg font-semibold mt-2">Class Standard Car</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 4 | 🧳 2 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿991 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white text-black w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://www.toyota.co.th/media/product/series/colors/v/hiace/187/5e68842c388f731334e2f1e0dd7901208aef31558168204ddb42621c483e1b29.webp"
+                    alt="Class Compact Van"
+                    class="w-full rounded-md mt-5"
+                />
+                <h3 class="text-lg font-semibold mt-2">Class Compact Van</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 5 | 🧳 2 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿1,046 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white text-black w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+
+                <div class="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+                <img
+                    src="https://toyotalanna.com/img/upload/3095d308eb79af6cb29d9348e28375b9.png"
+                    alt="Class Compact Van"
+                    class="w-full rounded-md mt-5"
+                />
+                <h3 class="text-lg font-semibold mt-2">Class Compact Van</h3>
+                <p class="text-gray-500 text-sm">หรืออืนๆ ที่คล้ายกัน</p>
+                <p class="text-gray-600 mt-1">👤 5 | 🧳 5 | 🚗 4</p>
+                <p class="text-lg font-bold text-black mt-2">฿1,049 / วัน</p>
+                <button
+                    class="bg-yellow-300 hover:bg-black hover:text-white text-black w-full py-2 rounded mt-3"
+                >
+                    ดูข้อเสนอ
+                </button>
+                </div>
+            </div>
+
+            <!-- ปุ่มดูเพิ่มเติม -->
+            <button
+                class="bg-yellow-300 hover:bg-black hover:text-white text-black px-6 py-2 rounded mt-6"
+            >
+                ดูเพิ่มเติม
+            </button>
+            </div>
+        </body>
+
+        <!-- ส่วนเนื้อหา -->
+        <body class="bg-gray-50 text-gray-800">
+            <section class="text-center py-16 bg-gradient-to-b">
+            <!-- หัวข้อเนื้อหา -->
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-gray-900 mt-10">
+                ทำไมต้องใช้ CAR4RENT ?
+            </h2>
+
+            <!-- เนื้อหา -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
+            >
+                <div class="text-center">
+                <img src="img/cancel.png" alt="ยกเลิกฟรี" class="w-24 mx-auto" />
+                <p class="mt-4 text-xl font-medium">ยกเลิกฟรี</p>
+                </div>
+
+                <div class="text-center">
+                <img
+                    src="img/reception.png"
+                    alt="มีเจ้าหน้าที่ดูแล"
+                    class="w-24 mx-auto"
+                />
+                <p class="mt-4 text-xl font-medium">มีเจ้าหน้าที่ดูแล</p>
+                </div>
+
+                <div class="text-center">
+                <img
+                    src="img/free-shipping.png"
+                    alt="ทดลองฟรีพรีเมียมฟรี 7 วัน"
+                    class="w-24 mx-auto"
+                />
+                <p class="mt-4 text-xl font-medium">ทดลองพรีเมียมฟรี 7 วัน</p>
+                </div>
+
+                <div class="text-center">
+                <img
+                    src="img/credit-cards-payment.png"
+                    alt="ไม่มีบัตรเครดิตก็เช่าได้"
+                    class="w-24 mx-auto"
+                />
+                <p class="mt-4 text-xl font-medium">ไม่มีบัตรเครดิตก็เช่าได้</p>
+                </div>
+            </div>
+            </section>
+
+            <!-- ส่วนติดต่อ -->
+            <div class="w-full h-screen flex flex-col">
+            <!-- รูปภาพ -->
+            <div
+                class="w-full h-1/2 bg-cover bg-center"
+                style="background-image: url('img/pic25.png')"
+            ></div>
+
+            <!-- เนื้อหาพื้นหลังสีเหลือง -->
+            <div
+                class="w-full h-1/2 bg-gradient-to-b from-yellow-200 to-yellow-300 flex items-center justify-center p-6"
+            >
+                <div class="text-center max-w-2xl w-full">
+                <!-- หัวข้อหลัก -->
+                <h1 class="text-3xl sm:text-5xl font-bold">
+                    We take care the road, <br />
+                    you enjoy the ride
+                </h1>
+
+                <!-- คำอธิบายเพิ่มเติม -->
+                <p class="mt-4 text-base sm:text-lg">
+                    พร้อมบริการทุกการเดินทางของคุณ
+                </p>
+
+                <!-- ข้อมูลติดต่อ -->
+                <div
+                    class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mt-6"
+                >
+                    <!-- อีเมล -->
+                    <div class="flex items-center space-x-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#000000"
+                    >
+                        <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+                        />
+                    </svg>
+                    <a
+                        href="mailto:car4rent@gmail.com"
+                        class="text-base sm:text-lg underline"
+                        >car4rent@gmail.com</a
+                    >
+                    </div>
+
+                    <!-- ที่อยู่ -->
+                    <div class="flex items-center space-x-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#000000"
+                    >
+                        <path
+                        d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+                        />
+                    </svg>
+                    <p class="text-base sm:text-lg whitespace-nowrap">
+                        suratthani, thailand 84000
+                    </p>
+                    </div>
+
+                    <!-- เบอร์โทร -->
+                    <div class="flex items-center space-x-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#000000"
+                    >
+                        <path
+                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                        />
+                    </svg>
+                    <p class="text-base sm:text-lg whitespace-nowrap">099-999-9999</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </body>
+</html>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>

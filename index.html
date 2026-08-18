@@ -15,10 +15,21 @@
     h1,h2,h3,.display{font-family:"Manrope",sans-serif}
     .nav{backdrop-filter:blur(16px);background:rgba(247,247,245,.82)}
     .grain{background-image:radial-gradient(rgba(0,0,0,.055) .7px,transparent .7px);background-size:9px 9px}
-    .project{transition:transform .25s ease,box-shadow .25s ease}
-    .project:hover{transform:translateY(-6px);box-shadow:0 24px 55px rgba(0,0,0,.09)}
-    .project img{transition:transform .5s ease}
-    .project:hover img{transform:scale(1.04)}
+    .project{transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+    .project:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(0,0,0,.09)}
+    .project img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+    .project:hover img{transform:scale(1.055)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(0,0,0,.055),transparent 68%);transform:translate(-50%,-50%);opacity:0;transition:opacity .25s ease}
+    .nav a,.nav>a{transition:color .2s ease,transform .2s ease}
+    .nav a:hover{transform:translateY(-1px)}
+    .hero-orb{animation:floatOrb 7s ease-in-out infinite}
+    @keyframes floatOrb{0%,100%{transform:translateY(0) rotate(3deg)}50%{transform:translateY(-10px) rotate(5deg)}}
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+      .reveal{opacity:1;transform:none}
+    }
   </style>
 </head>
 
@@ -28,7 +39,7 @@
     <a href="#home" class="font-extrabold tracking-[-.04em] text-xl">Web portfolio<span class="text-neutral-400">.</span></a>
     <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-neutral-500">
       <a href="#about" class="hover:text-black">About</a>
-      <a href="#work" class="hover:text-black">Work</a>
+      <a href="#projects" class="hover:text-black">Work</a>
       <a href="#skills" class="hover:text-black">Skills</a>
       <a href="#contact" class="hover:text-black">Contact</a>
     </nav>
@@ -37,7 +48,7 @@
 </header>
 
 <main id="home">
-  <section class="pt-[76px]">
+  <section class="pt-[76px] reveal">
     <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
       <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-14 lg:gap-20 items-end">
         <div>
@@ -50,14 +61,14 @@
             I build websites and digital interfaces with a focus on clean interaction, practical UX, and real-world projects.
           </p>
           <div class="mt-9 flex flex-wrap gap-3">
-            <a href="#work" class="rounded-full bg-black text-white px-6 py-3.5 text-sm font-semibold">View selected work ↗</a>
+            <a href="#projects" class="rounded-full bg-black text-white px-6 py-3.5 text-sm font-semibold">View selected work ↗</a>
             <a href="#contact" class="rounded-full border border-black/15 bg-white px-6 py-3.5 text-sm font-semibold">Contact me</a>
           </div>
         </div>
 
         <div class="lg:pb-1">
           <div class="relative max-w-[390px] lg:ml-auto">
-            <div class="absolute -inset-3 rounded-[2rem] bg-neutral-200/70 rotate-3"></div>
+            <div class="hero-orb absolute -inset-3 rounded-[2rem] bg-neutral-200/70 rotate-3"></div>
             <div class="relative rounded-[2rem] overflow-hidden bg-white p-2 border border-black/10">
               <img src="src/images/pic30.jpg" alt="Warataek Sukthae" class="w-full aspect-[4/5] object-cover rounded-[1.5rem]">
             </div>
@@ -77,7 +88,7 @@
     </div>
   </section>
 
-  <section id="about" class="border-y border-black/10 bg-white">
+  <section id="about" class="border-y border-black/10 bg-white reveal">
     <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-[.45fr_1fr] gap-10">
       <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-400">01 / About</p>
       <div>
@@ -95,7 +106,7 @@
 
     <section
       id="projects"
-      class="max-w-7xl mx-auto px-6 lg:px-10 py-28"
+      class="max-w-7xl mx-auto px-6 lg:px-10 py-28 reveal"
     >
 
       <!-- Heading -->
@@ -135,7 +146,7 @@
           href="https://fitmeal-wine.vercel.app/"
           target="_blank"
           rel="noopener"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -179,7 +190,7 @@
 
         <a
           href="project%20fish/1%20.%20Home.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -223,7 +234,7 @@
 
         <a
           href="Car4rentWebsite/src/car.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -269,7 +280,7 @@
           href="https://smart-xi-eight.vercel.app/dashboard"
           target="_blank"
           rel="noopener"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -313,7 +324,7 @@
 
         <a
           href="src/login.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -357,7 +368,7 @@
 
         <a
           href="src/clonding.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -401,7 +412,7 @@
 
         <a
           href="src/form.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -445,7 +456,7 @@
 
         <a
           href="src/BoxModel.HTML"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -489,7 +500,7 @@
 
         <a
           href="src/Basic_css.html"
-          class="project-item group"
+          class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
@@ -535,7 +546,7 @@
 
 
 
-  <section id="skills" class="bg-neutral-950 text-white">
+  <section id="skills" class="bg-neutral-950 text-white reveal">
     <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-[.45fr_1fr] gap-10">
       <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-500">03 / Skills</p>
       <div>
@@ -547,7 +558,7 @@
     </div>
   </section>
 
-  <section id="contact" class="bg-white">
+  <section id="contact" class="bg-white reveal">
     <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
       <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-400">04 / Contact</p>
       <div class="mt-5 flex flex-col md:flex-row md:items-end justify-between gap-10">
@@ -564,5 +575,74 @@
     </div>
   </section>
 </main>
+
+<script>
+(() => {
+  const glow = document.getElementById('cursorGlow');
+
+  if (glow && window.matchMedia('(pointer:fine)').matches) {
+    let x = -300, y = -300, tx = x, ty = y;
+
+    window.addEventListener('mousemove', (e) => {
+      tx = e.clientX;
+      ty = e.clientY;
+      glow.style.opacity = '1';
+    });
+
+    window.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+    });
+
+    const follow = () => {
+      x += (tx - x) * 0.12;
+      y += (ty - y) * 0.12;
+      glow.style.left = x + 'px';
+      glow.style.top = y + 'px';
+      requestAnimationFrame(follow);
+    };
+    follow();
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach((el) => observer.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('show'));
+  }
+
+  if (window.matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.project').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        const rx = (0.5 - py) * 3;
+        const ry = (px - 0.5) * 3;
+        card.style.transform =
+          `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-8px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  document.querySelectorAll('a.rounded-full').forEach((button) => {
+    button.addEventListener('pointerdown', () => button.style.transform = 'scale(.97)');
+    button.addEventListener('pointerup', () => button.style.transform = '');
+    button.addEventListener('pointerleave', () => button.style.transform = '');
+  });
+})();
+</script>
+
 </body>
 </html>

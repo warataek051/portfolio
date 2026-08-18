@@ -1,135 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portfolio | Warataek Sukthae</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Warataek Sukthae — Information Technology student portfolio">
+  <title>Warataek Sukthae — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:#f7f7f5;color:#171717}
+    h1,h2,h3,.display{font-family:"Manrope",sans-serif}
+    .nav{backdrop-filter:blur(16px);background:rgba(247,247,245,.82)}
+    .grain{background-image:radial-gradient(rgba(0,0,0,.055) .7px,transparent .7px);background-size:9px 9px}
+    .project{transition:transform .25s ease,box-shadow .25s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 24px 55px rgba(0,0,0,.09)}
+    .project img{transition:transform .5s ease}
+    .project:hover img{transform:scale(1.04)}
+  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-semibold">Warataek Portfolio</h1>
-            <nav class="space-x-6">
-                <a href="#about" class="hover:text-red-500">About</a>
-                <a href="#projects" class="hover:text-red-500">Projects</a>
-                <a href="#contact" class="hover:text-red-500">Contact</a>
-            </nav>
+
+<body>
+<header class="nav fixed top-0 inset-x-0 z-50 border-b border-black/5">
+  <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
+    <a href="#home" class="font-extrabold tracking-[-.04em] text-xl">Web portfolio<span class="text-neutral-400">.</span></a>
+    <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-neutral-500">
+      <a href="#about" class="hover:text-black">About</a>
+      <a href="#work" class="hover:text-black">Work</a>
+      <a href="#skills" class="hover:text-black">Skills</a>
+      <a href="#contact" class="hover:text-black">Contact</a>
+    </nav>
+    <a href="#contact" class="rounded-full bg-black text-white px-5 py-2.5 text-sm font-semibold hover:bg-neutral-800">Let's talk</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="pt-[76px]">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-14 lg:gap-20 items-end">
+        <div>
+         
+          <p class="mt-9 text-sm font-semibold uppercase tracking-[.22em] text-neutral-400">Information Technology · PSU</p>
+          <h1 class="display mt-4 text-[clamp(3.7rem,8vw,7.6rem)] leading-[.88] tracking-[-.07em] font-extrabold">
+            Warataek<br><span class="text-neutral-300">Sukthae.</span>
+          </h1>
+          <p class="mt-8 max-w-xl text-lg md:text-xl leading-8 text-neutral-500">
+            I build websites and digital interfaces with a focus on clean interaction, practical UX, and real-world projects.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#work" class="rounded-full bg-black text-white px-6 py-3.5 text-sm font-semibold">View selected work ↗</a>
+            <a href="#contact" class="rounded-full border border-black/15 bg-white px-6 py-3.5 text-sm font-semibold">Contact me</a>
+          </div>
         </div>
-    </header>
-    <div id="about" class="py-16 bg-gray-100 h-screen flex items-center justify-center">
-        <div class="container mx-auto flex flex-col items-center justify-center px-8 text-center">
-            <!-- Image Section (Moved above the text) -->
-            <div class="mb-6">
-                <img src="src/images/pic7.jpg" alt="Profile Image" class="w-48 h-48 rounded-full shadow-lg border-4 border-gray-100 ">
+
+        <div class="lg:pb-1">
+          <div class="relative max-w-[390px] lg:ml-auto">
+            <div class="absolute -inset-3 rounded-[2rem] bg-neutral-200/70 rotate-3"></div>
+            <div class="relative rounded-[2rem] overflow-hidden bg-white p-2 border border-black/10">
+              <img src="src/images/pic30.jpg" alt="Warataek Sukthae" class="w-full aspect-[4/5] object-cover rounded-[1.5rem]">
             </div>
-           
-            <div class="max-w-lg">
-                <h4 class="text-6xl font-semibold">Warataek Sukthae</h4>
-                <p class="text-gray-500 text-2xl mt-2">Web Developer | 6640011051</p>
-                <p class="text-gray-600 mt-4 text-xl">
-                    I have a deep passion for web development and strive to create elegant, user-friendly websites. Below, you'll find a selection of my projects and classroom exercises.
-                </p>
+            <div class="absolute -bottom-5 -left-5 bg-black text-white rounded-2xl px-5 py-4 shadow-xl">
+              <p class="text-[10px] uppercase tracking-[.18em] text-neutral-400">Focus</p>
+              <p class="mt-1 text-sm font-semibold">Web · UX/UI · IoT</p>
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-20 pt-6 border-t border-black/10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-neutral-500">
+        <span>Based in Thailand</span><span class="hidden sm:block">•</span>
+        <span>4th-year IT student</span><span class="hidden sm:block">•</span>
+        <span>Looking for real-world experience</span>
+      </div>
     </div>
+  </section>
 
-    <div id="projects" class="py-16">
-        <h2 class="text-2xl font-semibold mb-8 text-gray-700 uppercase text-center">Classroom Exercises</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 max-w-6xl mx-auto">
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="https://fitmeal-wine.vercel.app/">
-                    <img src="src/images/pic14.jpg" alt="Basic HTML" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">FitMeal</p>
-                    </p>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="src/form.html">
-                    <img src="https://www.shutterstock.com/image-photo/close-woman-hands-filling-form-600nw-1688882122.jpg" alt="Form" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Form</p>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="src/BoxModel.HTML">
-                    <img src="src/images/pic15.png" alt="Box Model" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Box Model</p>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="src/Basic_css.html">
-                    <img src="https://i.ytimg.com/vi/MJmhXn2FpyA/maxresdefault.jpg" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Page Layout</p>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="src/login.html">
-                    <img src="src/images/pic10.png" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Form Validation</p>
-                </a>
-            </div>
-
-             <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="src/clonding.html">
-                    <img src="src/images/cat.png" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">news</p>
-                </a>
-            </div>
-
-             <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="Car4rentWebsite/src/car.html">
-                    <img src="src/images/car.jpg" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Cars for rent</p>
-                </a>
-            </div>
-
-             <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="project%20fish/1%20.%20Home.html">
-                    <img src="src/images/fish market.png" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Fish market</p>
-                </a>
-            </div>
-
-             <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-8 h-96">
-                <a href="https://smart-xi-eight.vercel.app/dashboard">
-                    <img src="src/images/pollution.jpg" alt="Page Layout" class="w-full h-56 object-cover rounded-md">
-                    <p class="mt-4 font-medium text-gray-700">Real-Time Air Quality Monitoring</p>
-                </a>
-            </div>
-
-        </div>
+  <section id="about" class="border-y border-black/10 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-[.45fr_1fr] gap-10">
+      <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-400">01 / About</p>
+      <div>
+        <h2 class="display text-3xl md:text-5xl font-bold tracking-[-.045em] leading-tight max-w-3xl">
+          Turning ideas into interfaces that feel simple to use.
+        </h2>
+        <p class="mt-7 text-neutral-500 text-lg leading-8 max-w-2xl">
+          I’m an Information Technology student interested in software development, web development and UX/UI design. I learn by building—from responsive websites and web apps to IoT monitoring dashboards.
+        </p>
+      </div>
     </div>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact" class="bg-gray-100 py-10">
-    <h2 class="text-3xl font-bold text-center text-blue-900 uppercase mb-8">
-        Contact Me
-    </h2>
+   <!-- ================= PROJECTS ================= -->
 
-    <div class="flex flex-wrap justify-center items-center gap-8">
+    <section
+      id="projects"
+      class="max-w-7xl mx-auto px-6 lg:px-10 py-28"
+    >
 
-        <div class="flex items-center space-x-2">
-            <img src="src/images/pic11.png" alt="LINE" class="w-10 h-10">
-            <span class="text-gray-700">0945871795</span>
+      <!-- Heading -->
+
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+
+        <div>
+
+          <p class="text-xs uppercase tracking-[.25em] text-neutral-400">
+            02 / Selected Work
+          </p>
+
+          <h2
+            class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight"
+          >
+            Projects
+          </h2>
+
         </div>
 
-        <div class="flex items-center space-x-2">
-            <img src="src/images/pic12.png" alt="Phone" class="w-10 h-10">
-            <span class="text-gray-700">094-587-1795</span>
-        </div>
+        <p class="max-w-md text-sm leading-7 text-neutral-500">
+          A collection of projects I've created while learning
+          web development, UX/UI design and real-time applications.
+        </p>
 
-        <div class="flex items-center space-x-2">
-            <img src="src/images/pic13.png" alt="Email" class="w-10 h-10">
-            <span class="text-gray-700">6640011051@psu.ac.th</span>
-        </div>
+      </div>
 
+
+      <!-- ================= PROJECT GRID ================= -->
+
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+
+
+        <!-- 01 FitMeal -->
+
+        <a
+          href="https://fitmeal-wine.vercel.app/"
+          target="_blank"
+          rel="noopener"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/pic14.jpg"
+              alt="FitMeal"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                01 / Web Application
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                FitMeal
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A web project focused on food and meal planning.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 02 Fish Market -->
+
+        <a
+          href="project%20fish/1%20.%20Home.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/fish market.png"
+              alt="Fish Market"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                02 / UX UI
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Fish Market
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A multi-page market website designed around clear navigation.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 03 Car4Rent -->
+
+        <a
+          href="Car4rentWebsite/src/car.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/car.jpg"
+              alt="Car4Rent"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                03 / Web Design
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Car4Rent
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A responsive car rental interface with search-focused UX.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 04 Air Quality -->
+
+        <a
+          href="https://smart-xi-eight.vercel.app/dashboard"
+          target="_blank"
+          rel="noopener"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/pollution.jpg"
+              alt="Air Quality Monitoring"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                04 / IoT Dashboard
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Air Quality Monitoring
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A real-time monitoring dashboard for environmental sensor data.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 05 Form Validation -->
+
+        <a
+          href="src/login.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/pic10.png"
+              alt="Form Validation"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                05 / Frontend
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Form Validation
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A form interface demonstrating input validation and feedback.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 06 News Page -->
+
+        <a
+          href="src/clonding.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/cat.png"
+              alt="News Page"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                06 / HTML CSS
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                News Page
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A classroom exercise focused on page structure and layout.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 07 Form -->
+
+        <a
+          href="src/form.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="https://www.shutterstock.com/image-photo/close-woman-hands-filling-form-600nw-1688882122.jpg"
+              alt="Form"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                07 / HTML Form
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Form
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A structured form interface and input exercise.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 08 Box Model -->
+
+        <a
+          href="src/BoxModel.HTML"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="src/images/pic15.png"
+              alt="CSS Box Model"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                08 / CSS
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Box Model
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A visual exercise exploring CSS box model fundamentals.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- 09 Page Layout -->
+
+        <a
+          href="src/Basic_css.html"
+          class="project-item group"
+        >
+
+          <div class="overflow-hidden rounded-2xl bg-neutral-200">
+
+            <img
+              src="https://i.ytimg.com/vi/MJmhXn2FpyA/maxresdefault.jpg"
+              alt="Page Layout"
+              class="project-image w-full aspect-[4/3] object-cover"
+            >
+
+          </div>
+
+          <div class="pt-5 flex justify-between gap-5">
+
+            <div>
+
+              <p class="text-xs text-neutral-400 mb-2">
+                09 / CSS Layout
+              </p>
+
+              <h3 class="text-lg font-semibold">
+                Page Layout
+              </h3>
+
+              <p class="mt-2 text-sm text-neutral-500 leading-6">
+                A practice project for responsive page composition.
+              </p>
+
+            </div>
+
+            <span class="text-neutral-400 group-hover:text-black transition">
+              ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+  <section id="skills" class="bg-neutral-950 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-[.45fr_1fr] gap-10">
+      <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-500">03 / Skills</p>
+      <div>
+        <h2 class="display text-3xl md:text-5xl font-bold tracking-[-.045em]">Tools I use to build.</h2>
+        <div class="mt-9 flex flex-wrap gap-2.5">
+          <span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">HTML</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">CSS</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">JavaScript</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">React</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">Vue.js</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">Tailwind CSS</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">PHP</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">Firebase</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">UX/UI Design</span><span class="border border-white/15 rounded-full px-4 py-2.5 text-sm">IoT</span>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-blue-950 text-white text-center py-4 mt-10">
-    <p>&copy; 2025 Warataek Sukthae | All Rights Reserved</p>
-</footer>
+  <section id="contact" class="bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <p class="text-xs font-bold uppercase tracking-[.2em] text-neutral-400">04 / Contact</p>
+      <div class="mt-5 flex flex-col md:flex-row md:items-end justify-between gap-10">
+        <div>
+          <h2 class="display text-4xl md:text-6xl font-bold tracking-[-.055em] max-w-2xl">Let’s make something useful.</h2>
+          <p class="mt-5 text-neutral-500 max-w-lg leading-7">I’m open to internship opportunities, collaboration, and real-world development projects.</p>
+        </div>
+        <div class="text-sm space-y-3 md:text-right">
+          <a href="mailto:6640011051@psu.ac.th" class="block font-semibold hover:underline">6640011051@psu.ac.th</a>
+          <a href="tel:0945871795" class="block text-neutral-500 hover:text-black">094-587-1795</a>
+        </div>
+      </div>
+      <div class="mt-16 pt-6 border-t border-black/10 flex justify-between text-xs text-neutral-400"><span>© 2026 Warataek Sukthae</span><span>Designed & built with HTML + Tailwind CSS</span></div>
+    </div>
+  </section>
+</main>
 </body>
 </html>

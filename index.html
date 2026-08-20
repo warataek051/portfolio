@@ -13,12 +13,41 @@
     html{scroll-behavior:smooth}
     body{font-family:"DM Sans",sans-serif;background:#f7f7f5;color:#171717}
     h1,h2,h3,.display{font-family:"Manrope",sans-serif}
+    section[id]{scroll-margin-top:76px}
+    a:focus-visible{outline:2px solid #171717;outline-offset:4px}
+    .skip-link{position:fixed;top:-4rem;left:1rem;z-index:100;padding:.75rem 1rem;border-radius:.75rem;background:#171717;color:#fff;font-size:.875rem;font-weight:600;transition:top .2s ease}
+    .skip-link:focus{top:1rem}
     .nav{backdrop-filter:blur(16px);background:rgba(247,247,245,.82)}
     .grain{background-image:radial-gradient(rgba(0,0,0,.055) .7px,transparent .7px);background-size:9px 9px}
-    .project{transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
-    .project:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(0,0,0,.09)}
-    .project img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-    .project:hover img{transform:scale(1.055)}
+    .project{transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease;will-change:transform}
+    .project:hover{transform:translateY(-6px);border-color:rgba(0,0,0,.2);box-shadow:0 24px 55px rgba(0,0,0,.08)}
+    .project img{transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+    .project:hover img{transform:scale(1.045)}
+    .project-grid>.project-item{display:block;overflow:hidden;border:1px solid rgba(0,0,0,.09);border-radius:1.6rem;background:#fff;padding:.55rem}
+    .project-grid>.project-item>div:first-child{border-radius:1.15rem}
+    .project-grid>.project-item>div:last-child{padding:1.25rem 1rem 1.15rem}
+    .project-grid>.project-item>div:last-child>span{display:grid;place-items:center;flex:0 0 auto;width:2.5rem;height:2.5rem;border:1px solid rgba(0,0,0,.1);border-radius:999px;transition:background .25s ease,color .25s ease,transform .25s ease}
+    .project-grid>.project-item:hover>div:last-child>span{background:#171717;color:#fff;transform:translate(2px,-2px)}
+    .project-grid>.project-item:nth-child(2){order:1}
+    .project-grid>.project-item:nth-child(1){order:2}
+    .project-grid>.project-item:nth-child(3){order:3}
+    .project-grid>.project-item:nth-child(4){order:4}
+    .project-grid>.project-item:nth-child(6){order:5}
+    .project-grid>.project-item:nth-child(5){order:6}
+    .work-section{box-shadow:0 0 0 100vmax #f0f0ed;clip-path:inset(0 -100vmax)}
+    .availability-dot{box-shadow:0 0 0 5px rgba(34,197,94,.12)}
+    @media (min-width:768px){
+      .project-grid>.project-item:nth-child(2){grid-column:span 2;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr)}
+      .project-grid>.project-item:nth-child(2)>div:first-child{min-height:390px}
+      .project-grid>.project-item:nth-child(2) .project-image{height:100%;aspect-ratio:auto}
+      .project-grid>.project-item:nth-child(2)>div:last-child{padding:2rem;align-items:flex-end}
+      .project-grid>.project-item:nth-child(2) h3{font-size:2rem;letter-spacing:-.04em}
+      .project-grid>.project-item:nth-child(5){grid-column:span 2;display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);align-items:stretch}
+      .project-grid>.project-item:nth-child(5)>div:first-child{min-height:270px}
+      .project-grid>.project-item:nth-child(5) .project-image{height:100%;aspect-ratio:auto}
+      .project-grid>.project-item:nth-child(5)>div:last-child{padding:2rem 2.25rem;align-items:center}
+      .project-grid>.project-item:nth-child(5) h3{font-size:1.65rem;letter-spacing:-.035em}
+    }
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
     .reveal.show{opacity:1;transform:translateY(0)}
     .cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(0,0,0,.055),transparent 68%);transform:translate(-50%,-50%);opacity:0;transition:opacity .25s ease}
@@ -34,16 +63,18 @@
 </head>
 
 <body>
+<a href="#home" class="skip-link">Skip to main content</a>
+<div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
 <header class="nav fixed top-0 inset-x-0 z-50 border-b border-black/5">
   <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
     <a href="#home" class="font-extrabold tracking-[-.04em] text-xl">Web portfolio<span class="text-neutral-400">.</span></a>
-    <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-neutral-500">
+    <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-9 text-sm font-medium text-neutral-500">
       <a href="#about" class="hover:text-black">About</a>
       <a href="#projects" class="hover:text-black">Work</a>
       <a href="#skills" class="hover:text-black">Skills</a>
       <a href="#contact" class="hover:text-black">Contact</a>
     </nav>
-    <a href="#contact" class="rounded-full bg-black text-white px-5 py-2.5 text-sm font-semibold hover:bg-neutral-800">Let's talk</a>
+    <a href="#contact" class="rounded-full bg-black text-white px-4 sm:px-5 py-2.5 text-sm font-semibold hover:bg-neutral-800"><span class="sm:hidden">Contact</span><span class="hidden sm:inline">Let's talk</span></a>
   </div>
 </header>
 
@@ -54,7 +85,11 @@
         <div>
          
           <p class="mt-9 text-sm font-semibold uppercase tracking-[.22em] text-neutral-400">Information Technology · PSU</p>
-          <h1 class="display mt-4 text-[clamp(3.7rem,8vw,7.6rem)] leading-[.88] tracking-[-.07em] font-extrabold">
+          <div class="mt-5 inline-flex items-center gap-2.5 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-neutral-600 shadow-sm">
+            <span class="availability-dot h-2 w-2 rounded-full bg-green-500"></span>
+            Available for internship
+          </div>
+          <h1 class="display mt-5 text-[clamp(3.7rem,8vw,7.6rem)] leading-[.88] tracking-[-.07em] font-extrabold">
             Warataek<br><span class="text-neutral-300">Sukthae.</span>
           </h1>
           <p class="mt-8 max-w-xl text-lg md:text-xl leading-8 text-neutral-500">
@@ -98,6 +133,11 @@
         <p class="mt-7 text-neutral-500 text-lg leading-8 max-w-2xl">
           I’m an Information Technology student interested in software development, web development and UX/UI design. I learn by building—from responsive websites and web apps to IoT monitoring dashboards.
         </p>
+        <div class="mt-10 grid sm:grid-cols-3 gap-3 max-w-3xl">
+          <div class="rounded-2xl border border-black/10 bg-[#f7f7f5] p-5"><p class="display text-2xl font-bold tracking-[-.04em]">6</p><p class="mt-1 text-xs font-medium text-neutral-500">Selected projects</p></div>
+          <div class="rounded-2xl border border-black/10 bg-[#f7f7f5] p-5"><p class="display text-2xl font-bold tracking-[-.04em]">3</p><p class="mt-1 text-xs font-medium text-neutral-500">Core disciplines</p></div>
+          <div class="rounded-2xl border border-black/10 bg-[#f7f7f5] p-5"><p class="display text-2xl font-bold tracking-[-.04em]">4th</p><p class="mt-1 text-xs font-medium text-neutral-500">Year IT student</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -106,12 +146,12 @@
 
     <section
       id="projects"
-      class="max-w-7xl mx-auto px-6 lg:px-10 py-28 reveal"
+      class="work-section max-w-6xl mx-auto px-6 py-20 md:py-28 reveal"
     >
 
       <!-- Heading -->
 
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+      <div class="grid lg:grid-cols-[.42fr_1fr] gap-8 lg:gap-14 items-end">
 
         <div>
 
@@ -119,28 +159,24 @@
             02 / Selected Work
           </p>
 
-          <h2
-            class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight"
-          >
-            Projects
-          </h2>
+          <p class="mt-4 text-sm font-semibold text-neutral-500">Web · UX/UI · IoT</p>
 
         </div>
 
-        <p class="max-w-md text-sm leading-7 text-neutral-500">
-          A collection of projects I've created while learning
-          web development, UX/UI design and real-time applications.
-        </p>
+        <div>
+          <h2 class="display text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-.055em] leading-[1.02]">Projects built to<br>solve real problems.</h2>
+          <p class="mt-6 max-w-lg text-sm leading-7 text-neutral-500">A focused selection of web applications, user interfaces and real-time experiences—from ideas to working products.</p>
+        </div>
 
       </div>
 
 
       <!-- ================= PROJECT GRID ================= -->
 
-      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+      <div class="project-grid mt-14 md:mt-20 grid md:grid-cols-2 gap-5 md:gap-6">
 
 
-        <!-- 01 FitMeal -->
+        <!-- 02 FitMeal -->
 
         <a
           href="https://fitmeal-wine.vercel.app/"
@@ -152,7 +188,7 @@
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
 
             <img
-              src="src/images/pic14.jpg"
+              src="src/images/pic98.png"
               alt="FitMeal"
               class="project-image w-full aspect-[4/3] object-cover"
             >
@@ -164,7 +200,7 @@
             <div>
 
               <p class="text-xs text-neutral-400 mb-2">
-                01 / Web Application
+                02 / Web Application
               </p>
 
               <h3 class="text-lg font-semibold">
@@ -186,7 +222,7 @@
         </a>
 
 
-        <!-- 02 Fish Market -->
+        <!-- 01 Fish Market -->
 
         <a
           href="project%20fish/1%20.%20Home.html"
@@ -208,7 +244,7 @@
             <div>
 
               <p class="text-xs text-neutral-400 mb-2">
-                02 / UX UI
+                01 / UX UI
               </p>
 
               <h3 class="text-lg font-semibold">
@@ -240,7 +276,7 @@
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
 
             <img
-              src="src/images/car.jpg"
+              src="src/images/pic97.png"
               alt="Car4Rent"
               class="project-image w-full aspect-[4/3] object-cover"
             >
@@ -286,7 +322,7 @@
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
 
             <img
-              src="src/images/pollution.jpg"
+              src="src/images/pic96.jpg"
               alt="Air Quality Monitoring"
               class="project-image w-full aspect-[4/3] object-cover"
             >
@@ -320,18 +356,20 @@
         </a>
 
 
-        <!-- 05 Form Validation -->
+        <!-- 06 retroLense -->
 
         <a
-          href="src/login.html"
+          href="https://retrolense-portfolio-demo.vercel.app/"
+          target="_blank"
+          rel="noopener"
           class="project-item project group"
         >
 
           <div class="overflow-hidden rounded-2xl bg-neutral-200">
 
             <img
-              src="src/images/pic10.png"
-              alt="Form Validation"
+              src="src/images/pic99.png"
+              alt="retroLense camera marketplace"
               class="project-image w-full aspect-[4/3] object-cover"
             >
 
@@ -342,15 +380,15 @@
             <div>
 
               <p class="text-xs text-neutral-400 mb-2">
-                05 / Frontend
+                06 / Marketplace
               </p>
 
               <h3 class="text-lg font-semibold">
-                Form Validation
+                retroLense
               </h3>
 
               <p class="mt-2 text-sm text-neutral-500 leading-6">
-                A form interface demonstrating input validation and feedback.
+                A camera marketplace for buying, selling and trading through a simple, user-friendly experience.
               </p>
 
             </div>
@@ -364,7 +402,7 @@
         </a>
 
 
-        <!-- 06 News Page -->
+        <!-- 05 News Page -->
 
         <a
           href="src/clonding.html"
@@ -386,7 +424,7 @@
             <div>
 
               <p class="text-xs text-neutral-400 mb-2">
-                06 / HTML CSS
+                05 / HTML CSS
               </p>
 
               <h3 class="text-lg font-semibold">
@@ -395,138 +433,6 @@
 
               <p class="mt-2 text-sm text-neutral-500 leading-6">
                 A classroom exercise focused on page structure and layout.
-              </p>
-
-            </div>
-
-            <span class="text-neutral-400 group-hover:text-black transition">
-              ↗
-            </span>
-
-          </div>
-
-        </a>
-
-
-        <!-- 07 Form -->
-
-        <a
-          href="src/form.html"
-          class="project-item project group"
-        >
-
-          <div class="overflow-hidden rounded-2xl bg-neutral-200">
-
-            <img
-              src="https://www.shutterstock.com/image-photo/close-woman-hands-filling-form-600nw-1688882122.jpg"
-              alt="Form"
-              class="project-image w-full aspect-[4/3] object-cover"
-            >
-
-          </div>
-
-          <div class="pt-5 flex justify-between gap-5">
-
-            <div>
-
-              <p class="text-xs text-neutral-400 mb-2">
-                07 / HTML Form
-              </p>
-
-              <h3 class="text-lg font-semibold">
-                Form
-              </h3>
-
-              <p class="mt-2 text-sm text-neutral-500 leading-6">
-                A structured form interface and input exercise.
-              </p>
-
-            </div>
-
-            <span class="text-neutral-400 group-hover:text-black transition">
-              ↗
-            </span>
-
-          </div>
-
-        </a>
-
-
-        <!-- 08 Box Model -->
-
-        <a
-          href="src/BoxModel.HTML"
-          class="project-item project group"
-        >
-
-          <div class="overflow-hidden rounded-2xl bg-neutral-200">
-
-            <img
-              src="src/images/pic15.png"
-              alt="CSS Box Model"
-              class="project-image w-full aspect-[4/3] object-cover"
-            >
-
-          </div>
-
-          <div class="pt-5 flex justify-between gap-5">
-
-            <div>
-
-              <p class="text-xs text-neutral-400 mb-2">
-                08 / CSS
-              </p>
-
-              <h3 class="text-lg font-semibold">
-                Box Model
-              </h3>
-
-              <p class="mt-2 text-sm text-neutral-500 leading-6">
-                A visual exercise exploring CSS box model fundamentals.
-              </p>
-
-            </div>
-
-            <span class="text-neutral-400 group-hover:text-black transition">
-              ↗
-            </span>
-
-          </div>
-
-        </a>
-
-
-        <!-- 09 Page Layout -->
-
-        <a
-          href="src/Basic_css.html"
-          class="project-item project group"
-        >
-
-          <div class="overflow-hidden rounded-2xl bg-neutral-200">
-
-            <img
-              src="https://i.ytimg.com/vi/MJmhXn2FpyA/maxresdefault.jpg"
-              alt="Page Layout"
-              class="project-image w-full aspect-[4/3] object-cover"
-            >
-
-          </div>
-
-          <div class="pt-5 flex justify-between gap-5">
-
-            <div>
-
-              <p class="text-xs text-neutral-400 mb-2">
-                09 / CSS Layout
-              </p>
-
-              <h3 class="text-lg font-semibold">
-                Page Layout
-              </h3>
-
-              <p class="mt-2 text-sm text-neutral-500 leading-6">
-                A practice project for responsive page composition.
               </p>
 
             </div>
@@ -566,12 +472,12 @@
           <h2 class="display text-4xl md:text-6xl font-bold tracking-[-.055em] max-w-2xl">Let’s make something useful.</h2>
           <p class="mt-5 text-neutral-500 max-w-lg leading-7">I’m open to internship opportunities, collaboration, and real-world development projects.</p>
         </div>
-        <div class="text-sm space-y-3 md:text-right">
-          <a href="mailto:6640011051@psu.ac.th" class="block font-semibold hover:underline">6640011051@psu.ac.th</a>
-          <a href="tel:0945871795" class="block text-neutral-500 hover:text-black">094-587-1795</a>
+        <div class="flex flex-col sm:flex-row md:flex-col gap-3 md:items-end text-sm">
+          <a href="mailto:6640011051@psu.ac.th" class="inline-flex items-center justify-center rounded-full bg-black px-5 py-3 text-white font-semibold hover:bg-neutral-800">Email me ↗</a>
+          <a href="tel:0945871795" class="inline-flex items-center justify-center rounded-full border border-black/15 bg-white px-5 py-3 font-semibold text-neutral-600 hover:text-black hover:border-black/30">094-587-1795</a>
         </div>
       </div>
-      <div class="mt-16 pt-6 border-t border-black/10 flex justify-between text-xs text-neutral-400"><span>© 2026 Warataek Sukthae</span><span>Designed & built with HTML + Tailwind CSS</span></div>
+      <div class="mt-16 pt-6 border-t border-black/10 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-neutral-400"><span>© 2026 Warataek Sukthae</span><span>Designed &amp; built with HTML + Tailwind CSS</span></div>
     </div>
   </section>
 </main>
@@ -618,7 +524,7 @@
     reveals.forEach((el) => el.classList.add('show'));
   }
 
-  if (window.matchMedia('(pointer:fine)').matches) {
+  if (window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches) {
     document.querySelectorAll('.project').forEach((card) => {
       card.addEventListener('mousemove', (e) => {
         const r = card.getBoundingClientRect();
